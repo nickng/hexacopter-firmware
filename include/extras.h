@@ -53,6 +53,14 @@ int _free(uint8_t * args);
 int _deref(uint8_t * args);
 int _roboveroConfig(uint8_t * args);
 int _resetConfig(uint8_t * args);
+/* Patch */
+int _configAccel(uint8_t * args);
+int _readAccel(uint8_t * args);
+int _configMag(uint8_t * args);
+int _readMag(uint8_t * args);
+int _configGyro(uint8_t * args);
+int _readGyro(uint8_t * args);
+/* End of Patch */
 
 #endif
 
