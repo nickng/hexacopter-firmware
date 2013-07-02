@@ -1138,3 +1138,22 @@ int _PWM_SetSpeed(uint8_t * args)
 
   return 0;
 }
+
+int _PWM_CounterState(uint8_t * args)
+{
+  uint8_t * arg_ptr;
+  uint8_t PWMChannel;
+  FunctionalState NewState;
+
+  if ((arg_ptr = (uint8_t *) strtok(NULL, " ")) == NULL) return 1;
+  PWMChannel = (uint8_t) strtoul((char *) arg_ptr, NULL, 16);
+  if ((arg_ptr = (uint8_t *) strtok(NULL, " ")) == NULL) return 1;
+  NewState = (FunctionalState) strtoul((char *) arg_ptr, NULL, 16);
+
+  PWM_ChannelCmd(LPC_PWM1, PWMChannel, NewState);
+  PWM_ResetCounter(LPC_PWM1);
+  PWM_CounterCmd(LPC_PWM1, NewState);
+  PWM_Cmd(LPC_PWM1, NewState);
+
+  return 0;
+}

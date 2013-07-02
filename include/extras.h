@@ -62,5 +62,6 @@ int _configGyro(uint8_t * args);
 int _readGyro(uint8_t * args);
 /* End of Patch */
 int _PWM_SetSpeed(uint8_t * args);
+int _PWM_CounterState(uint8_t * args);
 
 #endif

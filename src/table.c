@@ -77,6 +77,7 @@ const _nxp_function driver_table[] = {
     {(uint8_t *) "PWM_ConfigMatch", _PWM_ConfigMatch},
     {(uint8_t *) "PWM_ResetCounter", _PWM_ResetCounter},
     {(uint8_t *) "PWM_CounterCmd", _PWM_CounterCmd},
+    {(uint8_t *) "PWM_CounterState", _PWM_CounterState},
     {(uint8_t *) "PWM_Cmd", _PWM_Cmd},
     {(uint8_t *) "PWM_ClearIntPending", _PWM_ClearIntPending},
     {(uint8_t *) "PWM_MATCHCFG_Type_malloc", _PWM_MATCHCFG_Type_malloc},
